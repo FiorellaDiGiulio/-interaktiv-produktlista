@@ -33,8 +33,8 @@ export function Modal(product) {
     const modal = document.getElementById("productModal");
     document.getElementById("modaltitle").textContent = product.title;
     document.getElementById("modalimage").src = product.image;
-    document.getElementById("modaldescription").textContent = product.description;
     document.getElementById("modalprice").textContent = `Pris: ${product.price} $`;
+    document.getElementById("modaldescription").textContent = product.description;
 
     modal.classList.remove("hidden");
 }
