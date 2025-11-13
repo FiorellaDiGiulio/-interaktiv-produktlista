@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type=""
+    <link rel="stylesheet" href="style.css"/>
+    <script defer type="module" src="main.js"></script>
 </head>
 <body>
 
-    <h1>Rubrik</h1>
-
-    <input type="text">
-
-    <section>
-        <div id="productList"></div>
-    </section>
+    <h1>Produktlista</h1>
     
+
+    <input id="input" type="text" placeholder="Sök produkt...">
+
+    <section aria-labelledby="productlistTitle">
+    <div id="meddelande"></div>
+    <h2 id="productlistTitle" class="visually-hidden">Produkter</h2>
+    <section id="productList" class="product-list" aria-label="Produktlista"></section>
+    </section>
+
+
+    <div id="productModal" class="modal hidden">
+        <div class="modal-content">
+        <button id="closeModal" class="close" aria-label="Stäng modal">&times;</button>
+        <h2 id="modaltitle"></h2>
+        <img id="modalimage" alt="productList">
+        <p id="modaldescription"></p>
+        <p id="modalprice"></p>
+        </div>
+    </div>
+  
 </body>
 </html>
